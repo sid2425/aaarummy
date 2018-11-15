@@ -1,0 +1,7 @@
+{
+  "name": "aaarummy",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

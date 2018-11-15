@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar  color="navbar">
+    <ion-title text-center>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- class="pane" -->
+<ion-content padding>
+  <ion-list >
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input required type="password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  <div padding>
+    <button ion-button color="navbar" block (click)="goToDashBoard()">Sign In</button>
+  </div>
+  <div padding>
+    <button ion-button color="navbar" block (click)="goToRegister()">Register</button>
+  </div>
+</ion-content>
