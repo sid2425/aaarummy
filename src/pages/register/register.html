@@ -4,25 +4,27 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+  <form #myform=ngForm (ngSubmit)="goToSign()">
   <ion-list >
 
     <ion-item>
       <ion-label floating>Username</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input name="Username" required ngModel type="text"></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" required ngModel name="password"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Email</ion-label>
-      <ion-input type="email"></ion-input>
+      <ion-input type="email" required name="email" ngModel></ion-input>
     </ion-item>
   
   </ion-list>
   <div padding>
-    <button ion-button color="navbar" block (click)="goToSign()">Register</button>
+    <button ion-button color="navbar" block [disabled]="myform.invalid">Register</button>
   </div>
+</form>
 </ion-content>

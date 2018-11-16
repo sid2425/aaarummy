@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { Component,ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { CashgamesPage } from '../cashgames/cashgames';
+import { TournamentsPage } from '../tournaments/tournaments';
+import { PracticePage } from '../practice/practice';
+import { ProfilePage } from '../profile/profile';
+
 /**
  * Generated class for the DashboardPage page.
  *
@@ -14,14 +18,22 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
   templateUrl: 'dashboard.html',
 })
 export class DashboardPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,private screenOrientation:ScreenOrientation) {
-    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
+  @ViewChild('nav') nav:NavController;
+  cashGames=CashgamesPage;
+  tournaments=TournamentsPage;
+  practice=PracticePage;
+  profile=ProfilePage;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private menuCtrl:MenuController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DashboardPage');
-    console.log('Landscape mode');
+  }
+
+  openPage(pages:any)
+  {
+  this.navCtrl.setRoot(pages);
+  this.menuCtrl.close();
   }
 
 }

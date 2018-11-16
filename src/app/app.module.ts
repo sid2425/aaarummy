@@ -9,13 +9,21 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { CashgamesPage } from '../pages/cashgames/cashgames';
+import { TournamentsPage } from '../pages/tournaments/tournaments';
+import { PracticePage } from '../pages/practice/practice';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RegisterPage,
-    DashboardPage
+    DashboardPage,
+    CashgamesPage,
+    TournamentsPage,
+    PracticePage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +34,11 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
     MyApp,
     HomePage,
     RegisterPage,
-    DashboardPage
+    DashboardPage,
+    CashgamesPage,
+    TournamentsPage,
+    PracticePage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

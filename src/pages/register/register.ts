@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
+// import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { HomePage } from '../home/home';
 
 /**
@@ -17,8 +17,10 @@ import { HomePage } from '../home/home';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private screenOrientation:ScreenOrientation) {
-    this.screenOrientation.unlock();
+  constructor(public navCtrl: NavController, public navParams: NavParams
+    // ,private screenOrientation:ScreenOrientation
+    ) {
+    // this.screenOrientation.unlock();
   }
 
   ionViewDidLoad() {
